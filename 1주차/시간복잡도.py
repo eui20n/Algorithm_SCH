@@ -36,6 +36,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# 다시 만들기
-# main.py랑 .idea => gitignore에 넣어서 commit하기
