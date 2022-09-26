@@ -1,4 +1,4 @@
-import random_list
+from random_list import make_random_list
 
 
 def selection_sort():
@@ -23,7 +23,7 @@ def selection_sort():
 
 
 if __name__ == '__main__':
-    test_list = random_list.make_random_list(10)
+    test_list = make_random_list(10)
     print(f"정렬 전 : {test_list}")
 
     sorted_arr = selection_sort()
