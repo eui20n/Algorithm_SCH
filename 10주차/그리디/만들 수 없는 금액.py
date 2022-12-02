@@ -1,13 +1,22 @@
 def not_made_coin(arr):
-    max_num = sum(arr)
     arr.sort()
+
+    temp = 1
+
+    for x in arr:
+        if temp < x:
+            break
+
+        temp += x
+
+    print(temp)
 
 
 if __name__ == '__main__':
     N = int(input())
     coins = list(map(int, input().split()))
 
-    # not_made_coin(coins)
+    not_made_coin(coins)
 
 """
 [input]
