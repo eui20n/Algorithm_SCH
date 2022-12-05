@@ -5,7 +5,7 @@ def population_move(visited, x, y):
     dx = [-1, 1, 0, 0]
     dy = [0, 0, -1, 1]
 
-    visited[y] = 1 << x
+    visited[y] |= 1 << x
 
     q = deque()
     q.append([x, y])
@@ -27,7 +27,6 @@ def population_move(visited, x, y):
 
             country_1 = population[x][y]
             country_2 = population[nx][ny]
-
             change_value = abs(country_1 - country_2)
 
             if L <= change_value <= R:
@@ -48,8 +47,6 @@ def main():
     result = 0
 
     while True:
-        print(*population, sep="\n")
-        print()
         visited = [0 for _ in range(N)]
         cnt = 1
 
@@ -71,4 +68,3 @@ if __name__ == "__main__":
     N, L, R = map(int, input().split())
     population = [list(map(int, input().split())) for _ in range(N)]
     print(main())
-    # print(*population, sep="\n")
